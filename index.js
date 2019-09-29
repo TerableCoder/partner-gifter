@@ -76,7 +76,7 @@ module.exports = function PartnerGifter(mod) {
 		playerLocation.w = event.w;
 	});
 	
-	mod.hook('S_INVEN', 18, (event) => {
+	mod.hook('S_ITEMLIST', 1, (event) => {
 		if (!enabled) return;
 		
 		invenItems = event.first ? event.items : invenItems.concat(event.items);
@@ -93,7 +93,7 @@ module.exports = function PartnerGifter(mod) {
 		}
 	});
 	
-	mod.hook('S_REQUEST_SPAWN_SERVANT', 1, (event) => {
+	mod.hook('S_REQUEST_SPAWN_SERVANT', 3, (event) => {
 		if (myGameId === event.ownerId && event.fellowship >= 1){
 			partnerDbid = event.dbid;
 			partnerId = event.id;

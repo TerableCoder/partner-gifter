@@ -44,7 +44,7 @@ module.exports = function PartnerGifter(mod) {
 		}
 	});
 	
-	mod.hook('S_LOGIN', 13, (event) => {
+	mod.hook('S_LOGIN', 14, (event) => {
 		loadConfig();
 		myGameId = event.gameId;
 		invenItems = [];

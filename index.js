@@ -76,7 +76,7 @@ module.exports = function PartnerGifter(mod) {
 		playerLocation.w = event.w;
 	});
 	
-	mod.hook('S_ITEMLIST', 1, (event) => {
+	mod.hook('S_ITEMLIST', 3, (event) => {
 		if (!enabled) return;
 		
 		invenItems = event.first ? event.items : invenItems.concat(event.items);
